@@ -1,0 +1,44 @@
+.generations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.generations button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0.3em 0.3em 0.3em 0.3em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.generations button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0% 10%;
+}
+
+.pokemon-list > .pokemon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 0 32%;
+  background-color: #272727;
+  border: 2px solid #747474;
+}
