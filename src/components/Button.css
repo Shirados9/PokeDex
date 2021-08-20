@@ -1,0 +1,63 @@
+:root {
+  --first: rgb(0, 117, 187);
+  --second: rgb(225, 227, 8);
+  --third: rgb(118, 3, 2);
+  --fourth: rgb(67, 10, 68);
+  --fifth: black;
+  --sixth: rgb(7, 89, 140);
+  --seventh: rgb(249, 156, 28);
+  --eight: rgb(245, 26, 90);
+}
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: white;
+  transition: 0.25s;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+}
+
+.first:hover {
+  color: white;
+  /* border-color: var(--first); */
+  background-color: var(--first);
+}
+.second:hover {
+  color: white;
+  /* border-color: var(--second); */
+  background-color: var(--second);
+}
+.third:hover {
+  color: white;
+  /* border-color: var(--third); */
+  background-color: var(--third);
+}
+.fourth:hover {
+  color: white;
+  /* border-color: var(--fourth); */
+  background-color: var(--fourth);
+}
+.fifth:hover {
+  color: white;
+  /* border-color: var(--fifth); */
+  background-color: var(--fifth);
+}
+.sixth:hover {
+  color: white;
+  /* border-color: var(--sixth); */
+  background-color: var(--sixth);
+}
+.seventh:hover {
+  color: white;
+  /* border-color: var(--seventh); */
+  background-color: var(--seventh);
+}
+.eight:hover {
+  color: white;
+  /* border-color: var(--eight); */
+  background-color: var(--eight);
+}

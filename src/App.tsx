@@ -3,6 +3,8 @@ import "./App.css";
 import { Pokemon as PokemonInterface } from "./interfaces/pokemon";
 import Pokemon from "./components/Pokemon";
 import { BounceLoader } from "react-spinners";
+import { Button } from "./components/Button";
+import bannerSVG from "./assets/banner.svg";
 
 export default function App() {
   const [pokemonList, setPokemonList] = useState<PokemonInterface[]>([]);
@@ -36,41 +38,64 @@ export default function App() {
 
   return (
     <>
-      <div className="generations">
-        <button onClick={() => setGeneration({ offset: 0, limit: 151 })}>
-          Generation I
-        </button>
-        <button onClick={() => setGeneration({ offset: 151, limit: 100 })}>
-          Generation II
-        </button>
-        <button onClick={() => setGeneration({ offset: 251, limit: 135 })}>
-          Generation III
-        </button>
-        <button onClick={() => setGeneration({ offset: 386, limit: 107 })}>
-          Generation IV
-        </button>
-        <button onClick={() => setGeneration({ offset: 493, limit: 156 })}>
-          Generation V
-        </button>
-        <button onClick={() => setGeneration({ offset: 649, limit: 72 })}>
-          Generation VI
-        </button>
-        <button onClick={() => setGeneration({ offset: 721, limit: 88 })}>
-          Generation VII
-        </button>
-        <button onClick={() => setGeneration({ offset: 809, limit: 89 })}>
-          Generation VIII
-        </button>
+      <div className="banner">
+        <img src={bannerSVG} alt="Pokémon Banner" />
       </div>
-      {loading ? (
-        <BounceLoader color={"white"} loading={loading} size={60} />
-      ) : (
-        <div className="pokemon-list">
-          {pokemonList.map(function (pokemon: PokemonInterface) {
-            return <Pokemon key={pokemon.id} pokemon={pokemon} />;
-          })}
+      <div className="content">
+        <div className="generations">
+          <Button
+            onClick={() => setGeneration({ offset: 0, limit: 151 })}
+            text="Generation I"
+            name="first"
+          />
+          <Button
+            onClick={() => setGeneration({ offset: 151, limit: 100 })}
+            text="Generation II"
+            name="second"
+          />
+          <Button
+            onClick={() => setGeneration({ offset: 251, limit: 135 })}
+            text="Generation III"
+            name="third"
+          />
+          <Button
+            onClick={() => setGeneration({ offset: 386, limit: 107 })}
+            text="Generation IV"
+            name="fourth"
+          />
+          <Button
+            onClick={() => setGeneration({ offset: 493, limit: 156 })}
+            text="Generation V"
+            name="fifth"
+          />
+          <Button
+            onClick={() => setGeneration({ offset: 649, limit: 72 })}
+            text="Generation VI"
+            name="sixth"
+          />
+          <Button
+            onClick={() => setGeneration({ offset: 721, limit: 88 })}
+            text="Generation VII"
+            name="seventh"
+          />
+          <Button
+            onClick={() => setGeneration({ offset: 809, limit: 89 })}
+            text="Generation VIII"
+            name="eight"
+          />
         </div>
-      )}
+        {loading ? (
+          <div className="loader">
+            <BounceLoader color={"white"} loading={loading} size={60} />
+          </div>
+        ) : (
+          <div className="pokemon-list">
+            {pokemonList.map(function (pokemon: PokemonInterface) {
+              return <Pokemon key={pokemon.id} pokemon={pokemon} />;
+            })}
+          </div>
+        )}
+      </div>
     </>
   );
 }
